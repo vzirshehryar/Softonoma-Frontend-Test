@@ -1,0 +1,115 @@
+.Navbar {
+  top: 0px;
+  left: 0px;
+  height: 73px;
+  background: #00a3ad 0% 0% no-repeat padding-box;
+  opacity: 1;
+  padding-left: 38px;
+  padding-right: 30px;
+}
+.Navbar p {
+  text-align: right;
+  letter-spacing: -0.1px;
+  color: #ffffff;
+  opacity: 1;
+  cursor: pointer;
+}
+.Navbar .menu_icon {
+  display: none;
+}
+
+/* on screens 600px or smaller */
+@media (max-width: 600px) {
+  .Navbar {
+    height: 60px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .Navbar .menu_icon {
+    display: block;
+  }
+  .Navbar p {
+    display: none;
+  }
+}
+
+/* ============================== */
+.device_management > h1 {
+  text-align: left;
+  font: normal normal normal 32px/56px Museo Sans Rounded 700;
+  letter-spacing: -1px;
+  color: #026786;
+  opacity: 1;
+}
+.device_management > p {
+  text-align: left;
+  letter-spacing: 0px;
+  color: #4a4a4a;
+  opacity: 1;
+}
+
+/* ============================== */
+
+.flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.flex_space_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 18px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: #2196f3;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
